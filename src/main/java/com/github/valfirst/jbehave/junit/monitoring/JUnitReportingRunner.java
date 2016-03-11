@@ -142,7 +142,7 @@ public class JUnitReportingRunner extends BlockJUnit4ClassRunner {
 		return performableTree;
 	}
 
-	private List<Story> storiesOf(PerformableTree performableTree, List<String> storyPaths) {
+	protected List<Story> storiesOf(PerformableTree performableTree, List<String> storyPaths) {
 		List<Story> stories = new ArrayList<>();
 		for (String storyPath : storyPaths) {
 			stories.add(performableTree.storyOfPath(configuration, storyPath));
